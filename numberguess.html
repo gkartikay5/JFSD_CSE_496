@@ -13,7 +13,7 @@
 
         <div id="message"></div>
 
-        <input type="number" id="guess" placeholder="Enter your guess" />
+        <input type="number" id="guess" placeholder="Enter your guess" min="1" max="100"/>
         <button id="submit-btn">Submit</button>
 
         <p>Attempts: <span id="attempts">0</span></p>
@@ -95,7 +95,7 @@
             }
 
             if (guess === randomNumber) {
-                document.getElementById('message').textContent = Congratulations! You guessed it right in ${attempts} attempts.;
+                document.getElementById('message').textContent = `Congratulations! You guessed it right in ${attempts} attempts.`;
                 document.getElementById('restart-btn').style.display = 'inline-block';
                 document.getElementById('submit-btn').disabled = true;
             } else if (guess < randomNumber) {
